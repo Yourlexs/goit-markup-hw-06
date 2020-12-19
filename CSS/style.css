@@ -321,6 +321,7 @@ nav {
 }
 
 .inputTitle {
+  display: block;
   margin-top: 0;
   margin-bottom: 4px;
   font-style: normal;
@@ -359,7 +360,6 @@ nav {
 }
 
 .textareaField {
-  display: block;
   margin-bottom: 20px;
 }
 
@@ -450,6 +450,7 @@ input:checked + .iconCheckbox{
   margin-bottom: 30px;
   background-color: var(--secondary-background-color);
 }
+
 .feature-list svg {
   width: 70px;
   height: 70px;
