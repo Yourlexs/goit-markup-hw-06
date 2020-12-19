@@ -332,39 +332,49 @@
                     </svg>
                 </button>
                 <form class="modalForm">
-                    <p>Оставьте свои данные, мы вам перезвоним</p>
-                    <div class="formFeald border">
-                        <label for="name">Имя</label>
-                        <input type="text" name="name" id="name">
-                        <svg class="iconFormModal">
-                            <use href="./images/iconModal-defs.svg#icon-person"></use>
-                        </svg>
+                    <p class="formTitle">Оставьте свои данные, мы вам перезвоним</p>
+                    <div class="inputField">
+                        <label class="inputTitle" for="name">Имя</label>
+                        <div class="inputBox">
+                            <input type="text" name="name" id="name">
+                            <svg class="iconFormModal">
+                                <use href="./images/iconModal-defs.svg#icon-person"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="formFeald border">
-                        <label for="tel">Телефон</label>
-                        <input type="tel" name="tel" id="tel">
-                        <svg class="iconFormModal">
-                            <use href="./images/iconModal-defs.svg#icon-phone"></use>
-                        </svg>
+
+                    <div class="inputField">
+                        <label class="inputTitle" for="tel">Телефон</label>
+                        <div class="inputBox">
+                            <input type="tel" name="tel" id="tel">
+                            <svg class="iconFormModal">
+                                <use href="./images/iconModal-defs.svg#icon-phone"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="formFeald border">
-                        <label for="mail">Почта</label>
-                        <input type="email" name="mail" id="mail">
-                        <svg class="iconFormModal">
-                            <use href="./images/iconModal-defs.svg#icon-email"></use>
-                        </svg>
+                    
+                    <div class="inputField">
+                        <label class="inputTitle" for="mail">Почта</label>
+                        <div class="inputBox">
+                            <input type="email" name="mail" id="mail">
+                            <svg class="iconFormModal">
+                                <use href="./images/iconModal-defs.svg#icon-email"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="formFeald">
-                        <label for="comment">Kомментарий</label>
-                        <textarea name="comment" class="textareaModal" id="comment" cols="50" rows="5" placeholder="Введите текст"></textarea>
+                    
+                    <div class="textareaField">
+                        <label class="inputTitle">Kомментарий</label>
+                        <textarea name="comment" cols="50" rows="5" placeholder="Введите текст"></textarea>
                     </div>
-                    <div class="formFeald check">
-                        <input type="checkbox" class="checkboxModal" name="agreement" id="agreement">
+                    
+                    <label class="checkboxField">
+                        <input type="checkbox" class="visually-hidden" name="agreement" id="agreement">
                         <svg class="iconCheckbox">
                             <use href="./images/iconModal-defs.svg#icon-square"></use>
                         </svg>
-                        <label for="agreement">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-                    </div>
+                        <span class="agreement">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
+                    </label>
                     <button class="modalFormButton" type="submit">Отправить</button>
                 </form>
             </div>
@@ -425,7 +435,6 @@
                             </svg>
                         </button>
                     </div>
-
                 </form>
             </div>
         </footer>

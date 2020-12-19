@@ -225,6 +225,7 @@ nav {
   border-color: transparent;
   border-radius: 4px;
   padding: 10px 32px;
+  cursor: pointer;
 }
 
 /* Модальное окно */
@@ -290,19 +291,22 @@ nav {
 
 /* Форма в модальном окне */
 
-.formFeald {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.inputField {
+  display: block;
   margin-bottom: 10px;
+}
+
+.inputBox {
+  position: relative;
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.formFeald:nth-child(5) {
-  margin-bottom: 20px;
+.inputBox:focus-within {
+  color: var(--accent-color);
 }
 
-.modalForm p{
+.formTitle {
   margin-top: 0;
   margin-bottom: 12px;
 
@@ -316,7 +320,8 @@ nav {
   letter-spacing: 0.03em;
 }
 
-.modalForm label {
+.inputTitle {
+  margin-top: 0;
   margin-bottom: 4px;
   font-style: normal;
   font-weight: 400;
@@ -325,7 +330,7 @@ nav {
   letter-spacing: 0.01em;
 }
 
-.formFeald.border input{
+.inputBox input {
   width: 100%;
   padding: 11px 0 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -333,16 +338,37 @@ nav {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.formFeald.border input:hover,
-.formFeald.border input:focus {
+.modalForm input:focus,
+.modalForm input:hover,
+.textareaField textarea:focus,
+.textareaField textarea:hover {
   border-color: var(--accent-color);
+  cursor: pointer;
+  outline: 0
 }
 
-.textareaModal {
+
+.iconFormModal {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.textareaField {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.textareaField textarea {
   padding: 12px 16px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea::placeholder {
@@ -351,43 +377,27 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.iconFormModal {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-.formFeald:focus-within {
-  color: var(--accent-color);
-}
-
-.formFeald.check {
-  flex-direction: row;
+.checkboxField {
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
-
-.formFeald.check label {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+input:checked + .iconCheckbox{
+  background-color: var(--accent-color);
+  background-image: url(../images/icon\ check\ \(2\).svg);
+  background-origin: border-box;
+  fill: none;
 }
 
-.checkboxModal {
+.visually-hidden {
   position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.checkboxModal:checked {
-  
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .iconCheckbox {
@@ -396,7 +406,14 @@ textarea::placeholder {
   height: 15px;
 }
 
-.formFeald.check  a {
+.agreement {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.checkboxField a{
   color: var(--accent-color);
   text-decoration: underline;
 }
@@ -404,6 +421,7 @@ textarea::placeholder {
 .modalFormButton {
   justify-content: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 /* Feature */
@@ -771,6 +789,7 @@ footer .social-list {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 /* Portfolio main */
@@ -804,6 +823,7 @@ footer .social-list {
   border-radius: 4px;
   border-color: transparent;
   padding: 6px 22px;
+  cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
