@@ -382,7 +382,7 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-input:checked + .iconCheckbox {
+input:checked + .agreement::before {
     background-color: var(--accent-color);
     background-image: url(../images/icon-check.svg);
     background-origin: border-box;
@@ -396,7 +396,9 @@ input:checked + .iconCheckbox {
     margin: -1px;
 }
 
-.iconCheckbox {
+.agreement::before {
+    content: "";
+    display: inline-block;
     margin-right: 8px;
     width: 16px;
     height: 15px;
@@ -407,6 +409,8 @@ input:checked + .iconCheckbox {
 }
 
 .agreement {
+    display: flex;
+    align-items: center;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -704,7 +708,8 @@ footer .container {
     margin-left: 70px;
 }
 
-.footer-social h3 {
+.footer-socialTitle {
+    margin-top: 0;
     margin-bottom: 20px;
     color: var(--primary-white-color);
     font-weight: 700;
@@ -733,8 +738,9 @@ footer .social-list {
     width: 570px;
 }
 
-.footerForm label {
+.footerFormTitle {
     display: block;
+    margin-top: 0;
     margin-bottom: 20px;
     font-style: normal;
     font-weight: 700;
